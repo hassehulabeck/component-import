@@ -1,0 +1,24 @@
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="out">
+    <x-component
+      v-bind:message='message'>
+    </x-component>
+  </div>
+</body>
+</html>
+<script type='module'>
+  import {xComponent} from './components/x-component.js';
+  const app = new Vue({
+    el: '#out',
+    data: {
+      message: 'Hejsan'
+    },
+    components: {
+      'x-component': xComponent
+    }
+  });
+</script>
